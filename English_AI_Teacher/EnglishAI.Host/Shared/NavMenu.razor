@@ -1,0 +1,83 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">EnglishAI.Host</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="vocabulary">
+                <span class="oi oi-book" aria-hidden="true"></span> Vocabulary
+            </NavLink>
+            <div class="nav flex-column sub-menu pl-5">
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="vocabulary/all">
+                        <span class="oi oi-book" aria-hidden="true"></span> All
+                    </NavLink>
+                </div>
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="vocabulary/phrasalverbs">
+                        <span class="oi oi-book" aria-hidden="true"></span> Phrasal Verbs
+                    </NavLink>
+                </div>
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="vocabulary/irregularverbs">
+                        <span class="oi oi-book" aria-hidden="true"></span> Irregular Verbs
+                    </NavLink>
+                </div>
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="vocabulary/idioms">
+                        <span class="oi oi-book" aria-hidden="true"></span> Idioms
+                    </NavLink>
+                </div>
+            </div>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="grammar">
+                <span class="oi oi-document" aria-hidden="true"></span> Grammar
+            </NavLink>
+            <div class="nav flex-column sub-menu pl-5">
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="grammar/verbtenses">
+                        <span class="oi oi-document" aria-hidden="true"></span> Verb Tenses
+                    </NavLink>
+                </div>
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="grammar/sentencestructure">
+                        <span class="oi oi-document" aria-hidden="true"></span> Sentence Structure
+                    </NavLink>
+                </div>
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="grammar/nounforms">
+                        <span class="oi oi-document" aria-hidden="true"></span> Noun Forms
+                    </NavLink>
+                </div>
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="grammar/pronouns">
+                        <span class="oi oi-document" aria-hidden="true"></span> Pronouns
+                    </NavLink>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

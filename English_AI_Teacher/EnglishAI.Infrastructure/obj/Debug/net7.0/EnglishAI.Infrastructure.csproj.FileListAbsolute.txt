@@ -1,0 +1,17 @@
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\bin\Debug\net7.0\EnglishAI.Infrastructure.deps.json
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\bin\Debug\net7.0\EnglishAI.Infrastructure.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\bin\Debug\net7.0\EnglishAI.Infrastructure.pdb
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\obj\Debug\net7.0\EnglishAI.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\obj\Debug\net7.0\EnglishAI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\obj\Debug\net7.0\EnglishAI.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\obj\Debug\net7.0\EnglishAI.Infrastructure.AssemblyInfo.cs
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\obj\Debug\net7.0\EnglishAI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\obj\Debug\net7.0\EnglishAI.Infrastructure.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\obj\Debug\net7.0\refint\EnglishAI.Infrastructure.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\obj\Debug\net7.0\EnglishAI.Infrastructure.pdb
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\obj\Debug\net7.0\ref\EnglishAI.Infrastructure.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\bin\Debug\net7.0\EnglishAI.Application.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\bin\Debug\net7.0\EnglishAI.Application.pdb
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\obj\Debug\net7.0\EnglishAI.Infrastructure.csproj.CopyComplete
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\bin\Debug\net7.0\EnglishAI.Utils.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Infrastructure\bin\Debug\net7.0\EnglishAI.Utils.pdb

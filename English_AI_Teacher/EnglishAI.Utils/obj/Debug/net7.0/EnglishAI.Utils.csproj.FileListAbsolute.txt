@@ -1,0 +1,12 @@
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Utils\bin\Debug\net7.0\EnglishAI.Utils.deps.json
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Utils\bin\Debug\net7.0\EnglishAI.Utils.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Utils\bin\Debug\net7.0\EnglishAI.Utils.pdb
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Utils\obj\Debug\net7.0\EnglishAI.Utils.csproj.AssemblyReference.cache
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Utils\obj\Debug\net7.0\EnglishAI.Utils.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Utils\obj\Debug\net7.0\EnglishAI.Utils.AssemblyInfoInputs.cache
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Utils\obj\Debug\net7.0\EnglishAI.Utils.AssemblyInfo.cs
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Utils\obj\Debug\net7.0\EnglishAI.Utils.csproj.CoreCompileInputs.cache
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Utils\obj\Debug\net7.0\EnglishAI.Utils.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Utils\obj\Debug\net7.0\refint\EnglishAI.Utils.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Utils\obj\Debug\net7.0\EnglishAI.Utils.pdb
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Utils\obj\Debug\net7.0\ref\EnglishAI.Utils.dll
