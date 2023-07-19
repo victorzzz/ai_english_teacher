@@ -1,4 +1,9 @@
+using EnglishAI.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAutoMapper(typeof(AutoMapperProfileInfrastructure));
+builder.Services.InitOpenAI();
 
 // Add services to the container.
 builder.Services.AddRazorPages();

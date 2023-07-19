@@ -30,3 +30,15 @@ C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI
 C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\obj\Debug\net7.0\EnglishAI.Host.pdb
 C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\obj\Debug\net7.0\EnglishAI.Host.genruntimeconfig.cache
 C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\obj\Debug\net7.0\ref\EnglishAI.Host.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\obj\Debug\net7.0\EnglishAI.Host.csproj.CopyComplete
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\bin\Debug\net7.0\OpenAI_API.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\bin\Debug\net7.0\EnglishAI.Application.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\bin\Debug\net7.0\EnglishAI.Infrastructure.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\bin\Debug\net7.0\EnglishAI.Utils.dll
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\bin\Debug\net7.0\EnglishAI.Infrastructure.pdb
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\bin\Debug\net7.0\EnglishAI.Application.pdb
+C:\Users\vikto\OneDrive\MyGitHub\ai_english_teacher\English_AI_Teacher\EnglishAI.Host\bin\Debug\net7.0\EnglishAI.Utils.pdb

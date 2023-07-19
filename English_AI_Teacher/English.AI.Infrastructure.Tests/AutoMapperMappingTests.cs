@@ -17,7 +17,7 @@ namespace English.AI.Infrastructure.Tests
         public void AutoMapper_Configuration_IsValid()
         {
             // Arrange
-            var config = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapperProfile>());
+            var config = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapperProfileInfrastructure>());
 
             // Act
             var action = config.AssertConfigurationIsValid;
@@ -31,7 +31,7 @@ namespace English.AI.Infrastructure.Tests
         public void AutoMapper_Session_To_ChatRequest()
         {
             // Arrange
-            var config = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapperProfile>());
+            var config = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapperProfileInfrastructure>());
             var mapper = config.CreateMapper();
             var session = new Session();
             session.AddSystemItem("Hello");
@@ -53,7 +53,7 @@ namespace English.AI.Infrastructure.Tests
         public void AutoMapper_SessionItem_To_ChatMessage()
         {
             // Arrange
-            var config = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapperProfile>());
+            var config = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapperProfileInfrastructure>());
             var mapper = config.CreateMapper();
             var sessionItem = new SessionItem() { Content = "Hello", Role = SessionItem.SystemRole };
 
@@ -70,7 +70,7 @@ namespace English.AI.Infrastructure.Tests
         public void AutoMapper_ChatRequest_To_Session()
         {
             // Arrange
-            var config = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapperProfile>());
+            var config = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapperProfileInfrastructure>());
             var mapper = config.CreateMapper();
             var chatRequest = new ChatRequest()
             {
@@ -96,7 +96,7 @@ namespace English.AI.Infrastructure.Tests
         public void AutoMapper_ChatMessage_To_SessionItem()
         {
             // Arrange
-            var config = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapperProfile>());
+            var config = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapperProfileInfrastructure>());
             var mapper = config.CreateMapper();
             var chatMessage = new ChatMessage { Name = SessionItem.SystemRole, Content = "Hello" };
 

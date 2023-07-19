@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace EnglishAI.Infrastructure
 {
-    public class AutoMapperProfile : Profile
+    public class AutoMapperProfileInfrastructure : Profile
     {
-        public AutoMapperProfile()
+        public AutoMapperProfileInfrastructure()
         {
             // Ignore destination properties except Messages
             CreateMap<Session, ChatRequest>(MemberList.Source)
