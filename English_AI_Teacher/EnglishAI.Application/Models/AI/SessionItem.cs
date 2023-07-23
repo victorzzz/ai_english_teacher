@@ -13,7 +13,7 @@ namespace EnglishAI.Application.Models.AI
         public static readonly string UserRole = "user";
         public static readonly string AssistantRole = "assistant";
 
-        public string Role { get; init; }
-        public string Content { get; init; }
+        public required string Role { get; init; }
+        public required string Content { get; init; }
     }
 }

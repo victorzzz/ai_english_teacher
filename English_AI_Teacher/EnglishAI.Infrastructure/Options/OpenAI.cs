@@ -8,6 +8,6 @@ namespace EnglishAI.Infrastructure.Options
 {
     public record OpenAI
     {
-        public string ApiKey { get; init; }
+        public string? ApiKey { get; init; }
     }
 }
