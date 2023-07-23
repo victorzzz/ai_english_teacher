@@ -1,6 +1,10 @@
 using EnglishAI.Infrastructure;
+using Microsoft.AspNetCore.Hosting.StaticWebAssets;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+StaticWebAssetsLoader.UseStaticWebAssets(builder.Environment, builder.Configuration);
 
 builder.Services.AddAutoMapper(typeof(AutoMapperProfileInfrastructure));
 builder.Services.InitOpenAI();
@@ -8,6 +12,7 @@ builder.Services.InitOpenAI();
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddMudServices();
 
 var app = builder.Build();
 

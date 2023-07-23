@@ -1,75 +1,25 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">EnglishAI.Host</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</div>
+﻿<MudNavMenu>
+    <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
 
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="vocabulary">
-                <span class="oi oi-book" aria-hidden="true"></span> Vocabulary
-            </NavLink>
-            <div class="nav flex-column sub-menu pl-5">
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="vocabulary/all">
-                        <span class="oi oi-book" aria-hidden="true"></span> All
-                    </NavLink>
-                </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="vocabulary/phrasalverbs">
-                        <span class="oi oi-book" aria-hidden="true"></span> Phrasal Verbs
-                    </NavLink>
-                </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="vocabulary/irregularverbs">
-                        <span class="oi oi-book" aria-hidden="true"></span> Irregular Verbs
-                    </NavLink>
-                </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="vocabulary/idioms">
-                        <span class="oi oi-book" aria-hidden="true"></span> Idioms
-                    </NavLink>
-                </div>
-            </div>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="grammar">
-                <span class="oi oi-document" aria-hidden="true"></span> Grammar
-            </NavLink>
-            <div class="nav flex-column sub-menu pl-5">
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="grammar/verbtenses">
-                        <span class="oi oi-document" aria-hidden="true"></span> Verb Tenses
-                    </NavLink>
-                </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="grammar/sentencestructure">
-                        <span class="oi oi-document" aria-hidden="true"></span> Sentence Structure
-                    </NavLink>
-                </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="grammar/nounforms">
-                        <span class="oi oi-document" aria-hidden="true"></span> Noun Forms
-                    </NavLink>
-                </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="grammar/pronouns">
-                        <span class="oi oi-document" aria-hidden="true"></span> Pronouns
-                    </NavLink>
-                </div>
-            </div>
-        </div>
-    </nav>
-</div>
+    <MudNavGroup title="Vocabulary">
+        <MudNavLink Href="vocabulary/ngsl" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">NGSL</MudNavLink>
+        <MudNavLink Href="vocabulary/awl" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">AWL</MudNavLink>
+        <MudNavLink Href="vocabulary/all" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">All</MudNavLink>
+        <MudNavLink Href="vocabulary/phrasalverbs" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Phrasal Verbs</MudNavLink>
+        <MudNavLink Href="vocabulary/irregularverbs" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Irregular Verbs</MudNavLink>
+        <MudNavLink Href="vocabulary/idioms" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Idioms</MudNavLink>
+    </MudNavGroup>
+
+    <MudNavGroup title="Grammar">
+        <MudNavLink Href="grammar/verbtenses" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Verb Tenses</MudNavLink>
+        <MudNavLink Href="grammar/sentencestructure" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Sentence Structure</MudNavLink>
+        <MudNavLink Href="grammar/nounforms" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Noun Forms</MudNavLink>
+        <MudNavLink Href="grammar/pronouns" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Pronouns</MudNavLink>
+    </MudNavGroup>
+
+
+</MudNavMenu>
+
 
 @code {
     private bool collapseNavMenu = true;
