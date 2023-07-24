@@ -1,8 +1,12 @@
+using EnglishAI.Host;
 using EnglishAI.Infrastructure;
 using Microsoft.AspNetCore.Hosting.StaticWebAssets;
 using MudBlazor.Services;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog();
 
 StaticWebAssetsLoader.UseStaticWebAssets(builder.Environment, builder.Configuration);
 
@@ -13,6 +17,8 @@ builder.Services.InitOpenAI();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices();
+
+builder.Services.InitUIControllers();
 
 var app = builder.Build();
 

@@ -2,5 +2,16 @@
 
 <PageTitle>Vocabulary. Phrasal Verbs.</PageTitle>
 
+<MudText Typo="Typo.h3" GutterBottom="true">Vocabulary. Phrasal Verbs.</MudText>
+ 
+<MudPaper Width="30%">
+    <MudSelect @bind-Value="@Controller.SelectedFrequency" Label="Phrasal verbs frequency to learn" Variant="Variant.Outlined">
+        @foreach (var item in Controller.Frequencies)
+        {
+            <MudSelectItem Value="@item" />
+        }
+    </MudSelect>
+</MudPaper>
 
+<MudSpacer />
 

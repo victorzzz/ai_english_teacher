@@ -15,9 +15,8 @@ using MudBlazor;
 using EnglishAI.Host;
 using EnglishAI.Host.Shared;
 
-namespace EnglishAI.Host.Pages
+namespace EnglishAI.Host.Pages;
+
+public partial class VocabularyAWL
 {
-    public partial class VocabularyAWL
-    {
-    }
 }

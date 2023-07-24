@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnglishAI.Application.Interfaces
+namespace EnglishAI.Application.Interfaces;
+
+public interface IAIAssistant
 {
-    public interface IAIAssistant
-    {
-        Task<string> AskAsync(Session request);
-    }
+    Task<string> AskAsync(Session request);
 }

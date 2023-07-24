@@ -11,14 +11,17 @@ using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 using Microsoft.JSInterop;
+using MudBlazor;
 using EnglishAI.Host;
 using EnglishAI.Host.Shared;
-using EnglishAI.Application.UIControllers;
 
-namespace EnglishAI.Host.Pages;
+namespace EnglishAI.Host.Shared;
 
-public partial class VocabularyPhrasalVerbs
+public partial class MainLayout
 {
-    [Inject]
-    public required VocabularyPhrasalVerbsController Controller { get; set; }
+    bool _drawerOpen = true;
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
 }

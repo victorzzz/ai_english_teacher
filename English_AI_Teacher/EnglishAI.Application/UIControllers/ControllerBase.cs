@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnglishAI.Application.UIControllers
+namespace EnglishAI.Application.UIControllers;
+
+public class ControllerBase
 {
-    public class ControllerBase
-    {
-    }
 }

@@ -5,12 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnglishAI.Application.UIControllers
-{
-    public class VocabularyPhrasalVerbsController : VocabularyControllerBase
-    {
-        public static IImmutableList<int> Frequency => new List<int> { 0, 1, 2, 3, 4, 5 }.ToImmutableList();
+namespace EnglishAI.Application.UIControllers;
 
-        public int SelectedFrequency { get; set; }
-    }
+public class VocabularyPhrasalVerbsController : VocabularyControllerBase
+{
+    public IImmutableList<int> Frequencies => ImmutableList.Create( 0, 1, 2, 3, 4, 5 );
+
+    public int SelectedFrequency { get; set; }
 }

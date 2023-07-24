@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnglishAI.Utils.Automapper
-{
-    public static class MappingExpressionExtensions
-    {
+namespace EnglishAI.Utils.Automapper;
 
-    }
+public static class MappingExpressionExtensions
+{
+
 }

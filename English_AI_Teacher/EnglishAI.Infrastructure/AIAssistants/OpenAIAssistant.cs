@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace EnglishAI.Infrastructure.AIAssistants
 {
-    public class OpenAIAssistantcs : IAIAssistant
+    public class OpenAIAssistant : IAIAssistant
     {
-        private readonly Options.OpenAI _options;
+        private readonly Options.OpenAIOptions _options;
         private readonly OpenAIAPI _openAIAPI;
 
-        public OpenAIAssistantcs(IOptions<Options.OpenAI> options) 
+        public OpenAIAssistant(IOptions<Options.OpenAIOptions> options) 
         { 
             _options = options.Value;
             _openAIAPI = new OpenAIAPI(_options.ApiKey);

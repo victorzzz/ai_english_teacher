@@ -8,20 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnglishAI.Infrastructure
-{
-    public class AutoMapperProfileInfrastructure : Profile
-    {
-        public AutoMapperProfileInfrastructure()
-        {
-            // Ignore destination properties except Messages
-            CreateMap<Session, ChatRequest>(MemberList.Source)
-                .ForMember(dest => dest.Messages, opt => opt.MapFrom(src => src.Items))
-                .ReverseMap();
+namespace EnglishAI.Infrastructure;
 
-            CreateMap<SessionItem, ChatMessage>()
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Role))
-                .ReverseMap();
-        }
+public class AutoMapperProfileInfrastructure : Profile
+{
+    public AutoMapperProfileInfrastructure()
+    {
+        // Ignore destination properties except Messages
+        CreateMap<Session, ChatRequest>(MemberList.Source)
+            .ForMember(dest => dest.Messages, opt => opt.MapFrom(src => src.Items))
+            .ReverseMap();
+
+        CreateMap<SessionItem, ChatMessage>()
+            .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Role))
+            .ReverseMap();
     }
 }
