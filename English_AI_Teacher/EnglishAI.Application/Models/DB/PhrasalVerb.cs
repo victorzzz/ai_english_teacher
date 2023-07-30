@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EnglishAI.Application.Models.DB;
 
-public record PhrasalVerb
+public record PhrasalVerb : ApplicationEntityBase
 {
     public string PrasavBerb { get; init; } = default!;
 

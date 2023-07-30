@@ -42,59 +42,7 @@ public class App
         {
             var phrasalVerbValue = phrasalVerbItem.Value;
 
-            var phrasalVerbEntity = new PhrasalVerbEntity
-            { 
-                PrasalVerb = phrasalVerbItem.Name,
-                Descriptions = phrasalVerbValue.GetProperty("descriptions").Deserialize<List<string>>() ?? new List<string>(),
-                Deriviates = phrasalVerbValue.GetProperty("derivatives").Deserialize<List<string>>() ?? new List<string>(),
-                Examples = phrasalVerbValue.GetProperty("examples").Deserialize<List<string>>() ?? new List<string>(),  
-                Synonyms = phrasalVerbValue.GetProperty("synonyms").Deserialize<List<string>>() ?? new List<string>(),
-                Frequency = phrasalVerbValue.GetProperty("frequency").GetInt32()
-
-
-
-            // get phrasal verb definition
-            var phrasalVerbDefinition = phrasalVerbValue.GetProperty("definition").GetString();
-
-            // get phrasal verb examples
-            var phrasalVerbExamples = phrasalVerbValue.GetProperty("examples").EnumerateArray()
-                .Select(x => x.GetString())
-                .ToList();
-
-            // get phrasal verb synonyms
-            var phrasalVerbSynonyms = phrasalVerbValue.GetProperty("synonyms").EnumerateArray()
-                .Select(x => x.GetString())
-                .ToList();
-
-            // get phrasal verb antonyms
-            var phrasalVerbAntonyms = phrasalVerbValue.GetProperty("antonyms").EnumerateArray()
-                .Select(x => x.GetString())
-                .ToList();
-
-            // get phrasal verb synonyms
-            var phrasalVerbRelatedWords = phrasalVerbValue.GetProperty("related_words").EnumerateArray()
-                .Select(x => x.GetString())
-                .ToList();
-
-            // get phrasal verb synonyms
-            var phrasalVerbExamplesWithSynonyms = phrasalVerbValue.GetProperty("examples_with_synonyms").EnumerateArray()
-                .Select(x => x.GetString())
-                .ToList();
-
-            // get phrasal verb synonyms
-            var phrasalVerbExamplesWithAntonyms = phrasalVerbValue.GetProperty("examples_with_antonyms").EnumerateArray()
-                .Select(x => x.GetString())
-                .ToList();
-
-            // get phrasal verb synonyms
-            var phrasalVerbExamplesWithRelatedWords = phrasalVerbValue.GetProperty("examples_with_related_words").EnumerateArray()
-                .Select(x => x.GetString())
-                .ToList();
-
-            // get phrasal verb synonyms
-            var phrasalVerbExamplesWithSynonymsAndAntonyms = phrasalVerbValue.GetProperty("examples_with_synonyms_and_antonyms").EnumerateArray()
-                .Select(x => x.GetString())
-                .ToList();
+            var phrasalVerbEntity = phrasalVerbValue.Deserialize<PhrasalVerbEntity>();
         }
 
     }

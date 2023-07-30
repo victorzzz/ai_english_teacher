@@ -3,6 +3,8 @@ using EnglishAI.Infrastructure.AIAssistants;
 using EnglishAI.Infrastructure.Options;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,5 +33,25 @@ public static class Init
             {
                 configuration.GetSection(MongoDBOptions.SectionName).Bind(settings);
             });
+
+        services.AddSingleton<IMongoClient, MongoClient>(
+            sp =>
+            {
+                var options = sp.GetRequiredService<IOptions<MongoDBOptions>>();
+                var mongoClient = new MongoClient(options.Value.ConnectionString);
+
+                return mongoClient;
+            });
+
+        services.AddSingleton(
+            sp =>
+            {
+                var client = sp.GetRequiredService<IMongoClient>();
+                var options = sp.GetRequiredService<IOptions<MongoDBOptions>>();
+                var db = client.GetDatabase(options.Value.DatabaseName);
+
+                return db;
+            });
+
     }
 }
