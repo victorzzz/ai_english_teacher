@@ -21,43 +21,61 @@ public class App
     private readonly MongoDBOptions _mongoDBOptions;
     private readonly AppOptions _appOptions;
     private readonly IPhrasalVerbRepository _phrasalVerbRepository;
-    private readonly HttpClient _httpClient;
+    private readonly IHttpClientFactory _httpClientFactory;
 
     public App(
         ILogger<App> logger,
         IOptions<MongoDBOptions> mongoDBOptions,
         IOptions<AppOptions> appOptions,
         IPhrasalVerbRepository phrasalVerbRepository,
-        HttpClient httpClient)
+        IHttpClientFactory httpClientFactory)
     {
         _logger = logger;
         _mongoDBOptions = mongoDBOptions.Value;
         _appOptions = appOptions.Value;
         _phrasalVerbRepository = phrasalVerbRepository;
-        _httpClient = httpClient;
+        _httpClientFactory = httpClientFactory;
     }   
 
     public async Task ProcessPhrasalVerbs(CancellationToken cancellationToken)
     {
-        var content = await _httpClient.GetStringAsync(_appOptions.PhrasalVerbsPath);
-        var phrasalVerbs = JsonDocument.Parse(content);
+        _logger.LogInformation($"Start processing phrasal verbs");
 
-        // enumerate all top level properties in Json document phrasalVerbs
-        foreach (var phrasalVerbItem in phrasalVerbs.RootElement.EnumerateObject())
+        if (! await _phrasalVerbRepository.IsEmpty(cancellationToken))
         {
-            var phrasalVerbValue = phrasalVerbItem.Value;
-
-            var phrasalVerbEntity = phrasalVerbValue.Deserialize<PhrasalVerb>();
-
-            if (phrasalVerbEntity == null)
-            {
-                _logger.LogError($"Phrasal verb {phrasalVerbItem.Name} is null");
-                continue;
-            }
-
-            await _phrasalVerbRepository.AddAsync(phrasalVerbEntity, cancellationToken);
+            _logger.LogInformation($"Phrasal verbs are already in the DB. Processing stopped.");
+            return;
         }
 
+        try
+        {
+            var httpClient = _httpClientFactory.CreateClient();
+
+            var contentStream = await httpClient.GetStreamAsync(_appOptions.PhrasalVerbsPath);
+
+            var phrasalVerbs = JsonDocument.Parse(contentStream, new JsonDocumentOptions { });
+
+            foreach (var phrasalVerbItem in phrasalVerbs.RootElement.EnumerateObject())
+            {
+                var phrasalVerbValue = phrasalVerbItem.Value;
+
+                var phrasalVerbEntity = phrasalVerbValue.Deserialize<PhrasalVerb>(new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+                if (phrasalVerbEntity == null)
+                {
+                    _logger.LogError($"Phrasal verb {phrasalVerbItem.Name} is null");
+                    continue;
+                }
+
+                phrasalVerbEntity.PrasalVerb = phrasalVerbItem.Name;
+
+                await _phrasalVerbRepository.AddAsync(phrasalVerbEntity, cancellationToken);
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, $"Error while processing phrasal verbs");
+        }
     }
 
     public async Task ProcessAWL(CancellationToken cancellationToken)

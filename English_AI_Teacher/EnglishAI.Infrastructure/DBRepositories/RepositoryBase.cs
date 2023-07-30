@@ -40,6 +40,14 @@ namespace EnglishAI.Infrastructure.DBRepositories
             Collection = _database.GetCollection<TDBModel>(GetCollectionName());
         }
 
+        async Task<bool> IRepository<TApplicationModel>.IsEmpty(CancellationToken cancellationToken)
+        {
+            var filter = new BsonDocument();
+            var result = await Collection.Find(filter).Limit(1).FirstOrDefaultAsync(cancellationToken);
+
+            return result == null;  // If result is null, then the collection is empty
+        }
+
         Task IRepository<TApplicationModel>.AddAsync(TApplicationModel model, CancellationToken cancellationToken)
         {
             var dbModel = _mapper.Map<TDBModel>(model);

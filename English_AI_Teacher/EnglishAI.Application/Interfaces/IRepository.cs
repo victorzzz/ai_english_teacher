@@ -10,6 +10,8 @@ namespace EnglishAI.Application.Interfaces
     public interface IRepository<TModel> 
         where TModel : ApplicationEntityBase
     {
+        Task<bool> IsEmpty(CancellationToken cancellationToken);
+
         Task<IList<TModel>> GetAllAsync(CancellationToken cancellationToken);
 
         Task<TModel?> GetAsync(string id, CancellationToken cancellationToken);
