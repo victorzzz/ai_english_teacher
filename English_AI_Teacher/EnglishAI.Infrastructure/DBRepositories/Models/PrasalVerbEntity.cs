@@ -8,12 +8,8 @@ using System.Threading.Tasks;
 
 namespace EnglishAI.Infrastructure.DBRepositories.Models;
 
-public record PhrasalVerbEntity
+public record PhrasalVerbEntity : EntityBase
 {
-    [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    public string? Id { get; init; }
-
     public string PhrasalVerb { get; init; } = default!;
 
     public List<string> Descriptions { get; init; } = new List<string>();

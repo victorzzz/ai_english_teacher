@@ -1,5 +1,6 @@
 ﻿using EnglishAI.Application.Interfaces;
 using EnglishAI.Infrastructure.AIAssistants;
+using EnglishAI.Infrastructure.DBRepositories;
 using EnglishAI.Infrastructure.Options;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -52,6 +53,8 @@ public static class Init
 
                 return db;
             });
+
+        services.AddScoped<IPhrasalVerbRepository, PhrasalVerbRepository>();
 
     }
 }

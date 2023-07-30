@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace EnglishAI.Infrastructure.DBRepositories
 {
-    internal class RepositoryBase<TApplicationModel, TDBModel> : IRepository<TApplicationModel>
+    public class RepositoryBase<TApplicationModel, TDBModel> : IRepository<TApplicationModel>
         where TApplicationModel : ApplicationEntityBase
         where TDBModel : EntityBase
     {
@@ -72,7 +72,7 @@ namespace EnglishAI.Infrastructure.DBRepositories
             return Collection.DeleteOneAsync(filter, cancellationToken);
         }
 
-        Task IRepository<TApplicationModel>.UpdateAsync(TApplicationModel model, CancellationToken cancellationToken)
+        Task IRepository<TApplicationModel>.ReplaceAsync(TApplicationModel model, CancellationToken cancellationToken)
         {
             var dbModel = _mapper.Map<TDBModel>(model);
 

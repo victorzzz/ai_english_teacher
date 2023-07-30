@@ -18,7 +18,7 @@ namespace EnglishAI.Application.Interfaces
 
         Task AddRangeAsync(IEnumerable<TModel> models, CancellationToken cancellationToken);
 
-        Task UpdateAsync(TModel model, CancellationToken cancellationToken);
+        Task ReplaceAsync(TModel model, CancellationToken cancellationToken);
 
         Task RemoveAsync(string id, CancellationToken cancellationToken);
     }

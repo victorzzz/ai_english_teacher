@@ -19,5 +19,6 @@ public record AppOptions
     public string AllWordsPath { get; init; } = default!;
 
     public string IrregularVerbsPath { get; init; } = default!;
+
     public string IdiomsPath { get; init; } = default!;
 }
