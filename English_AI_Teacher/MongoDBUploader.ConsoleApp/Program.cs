@@ -4,7 +4,6 @@ using EnglishAI.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDBUploader.ConsoleApp;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Configuration;
 
 using var host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
@@ -14,7 +13,7 @@ using var host = Host.CreateDefaultBuilder(args)
         services.AddHttpClient();
         services.InitApp();
     })
-    .UseSerilog()
+    .UseSerilog((hostingContext, loggerConfiguration) => loggerConfiguration.ReadFrom.Configuration(hostingContext.Configuration))
     .Build();
 
 using var scope = host.Services.CreateScope();
