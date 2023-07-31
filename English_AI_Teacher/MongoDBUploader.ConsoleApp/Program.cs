@@ -24,7 +24,11 @@ logger.LogInformation("Starting application");
 
 var app = scope.ServiceProvider.GetRequiredService<App>();
 
-logger.LogInformation("Processing external sources");
-app.ProcessPhrasalVerbs(CancellationToken.None).Wait();
+logger.LogInformation("Processing external sources ...");
+
+//app.ProcessPhrasalVerbs(CancellationToken.None).Wait();
+app.ProcessIrregularVerbs(CancellationToken.None).Wait();
+
+logger.LogInformation("Processing external sources is finished");
 
 

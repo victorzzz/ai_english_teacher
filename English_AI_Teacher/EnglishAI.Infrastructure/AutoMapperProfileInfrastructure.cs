@@ -26,5 +26,8 @@ public class AutoMapperProfileInfrastructure : Profile
 
         CreateMap<PhrasalVerbEntity, PhrasalVerb>()
             .ReverseMap();
+
+        CreateMap<IrregularVerbEntity, IrregularVerb>()
+            .ReverseMap();
     }
 }

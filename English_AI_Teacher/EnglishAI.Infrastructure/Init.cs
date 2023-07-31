@@ -55,5 +55,6 @@ public static class Init
             });
 
         services.AddScoped<IPhrasalVerbRepository, PhrasalVerbRepository>();
+        services.AddScoped<IIrregularVerbRepository, IrregularVerbRepository>();
     }
 }
